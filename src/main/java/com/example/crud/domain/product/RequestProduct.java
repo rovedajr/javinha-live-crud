@@ -10,6 +10,6 @@ public record RequestProduct(
         String name,
 
         @NotNull
-        Integer price_in_cents
+        Integer priceInCents
 ) {
 }

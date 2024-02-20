@@ -6,8 +6,7 @@ import lombok.*;
 @Table(name="product")
 @Entity(name="product")
 @EqualsAndHashCode(of = "id")
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Product {
@@ -16,13 +15,13 @@ public class Product {
 
     private String name;
 
-    private Integer price_in_cents;
+    private Integer priceInCents;
 
     private Boolean active;
 
     public Product(RequestProduct requestProduct){
         this.name = requestProduct.name();
-        this.price_in_cents = requestProduct.price_in_cents();
+        this.priceInCents = requestProduct.priceInCents();
         this.active = true;
     }
 }
