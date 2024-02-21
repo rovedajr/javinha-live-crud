@@ -1,6 +1,7 @@
 package com.example.crud.domain.product;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 @Table(name="product")
@@ -19,7 +20,7 @@ public class Product {
 
     private Boolean active;
 
-    public Product(RequestProduct requestProduct){
+    public Product(@NotNull RequestProduct requestProduct){
         this.name = requestProduct.name();
         this.priceInCents = requestProduct.priceInCents();
         this.active = true;
